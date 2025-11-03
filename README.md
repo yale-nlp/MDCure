@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <a href="https://huggingface.co/collections/yale-nlp/mdcure-6724914875e87f41e5445395" style="display:inline-block;background-color:#4CAF50;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;margin-right:10px;">🤗 HF Repo</a> • <a href="[https://arxiv.org/abs/2410.23463](https://aclanthology.org/2025.acl-long.1418/)" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;">📄 Paper</a>
+  <a href="https://huggingface.co/collections/yale-nlp/mdcure-6724914875e87f41e5445395" style="display:inline-block;background-color:#4CAF50;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;margin-right:10px;">🤗 HF Repo</a> • <a href="https://aclanthology.org/2025.acl-long.1418/" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;">📄 Paper</a>
 </p>
 
 
