@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <a href="https://huggingface.co/collections/yale-nlp/mdcure-6724914875e87f41e5445395" style="display:inline-block;background-color:#4CAF50;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;margin-right:10px;">🤗 HF Repo</a> • <a href="https://arxiv.org/abs/2410.23463" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;">📄 Paper</a>
+  <a href="https://huggingface.co/collections/yale-nlp/mdcure-6724914875e87f41e5445395" style="display:inline-block;background-color:#4CAF50;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;margin-right:10px;">🤗 HF Repo</a> • <a href="[https://arxiv.org/abs/2410.23463](https://aclanthology.org/2025.acl-long.1418/)" style="display:inline-block;background-color:#2196F3;color:white;padding:10px 20px;text-align:center;text-decoration:none;font-size:16px;border-radius:5px;">📄 Paper</a>
 </p>
 
 
@@ -368,11 +368,26 @@ We list below the evaluation benchmarks that we used in our paper. For Multi-XSc
 
 If you find the content of this project helpful, please cite our paper as follows:
 ```bibtex
-@article{liu2024mdcure,
-    title={MDCure: A Scalable Pipeline for Multi-Document Instruction-Following},
-    author={Gabrielle Kaili-May Liu and Bowen Shi and Avi Caciularu and Idan Szpektor and Arman Cohan},
-    journal={arXiv preprint arXiv:2410.23463},
-    year={2024},
-    url={https://arxiv.org/abs/2410.23463}
+@inproceedings{liu-etal-2025-mdcure,
+    title = "{MDC}ure: A Scalable Pipeline for Multi-Document Instruction-Following",
+    author = "Liu, Gabrielle Kaili-May  and
+      Shi, Bowen  and
+      Caciularu, Avi  and
+      Szpektor, Idan  and
+      Cohan, Arman",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.1418/",
+    doi = "10.18653/v1/2025.acl-long.1418",
+    pages = "29258--29296",
+    ISBN = "979-8-89176-251-0",
+    abstract = "Multi-document (MD) processing is crucial for LLMs to handle real-world tasks such as summarization and question-answering across large sets of documents. While LLMs have improved at processing long inputs, MD contexts still present unique difficulties, including management of inter-document dependencies, redundancy, and incoherent structures. To address this challenge, we introduce MDCure, a scalable and effective instruction data generation framework to enhance the MD capabilities of LLMs without the computational cost of pre-training or reliance on human-annotated data. MDCure generates high-quality synthetic MD instruction data over sets of articles via targeted prompts. We also introduce MDCureRM, a cost-effective, MD-specific reward model to score and filter generated data based on their training utility for MD settings. MDCure is compatible with open- and closed-source models in addition to policy optimization methods such as PPO, enabling even small open- source models to surpass proprietary LLMs as strong generators of high-quality MD instruction data without further data filtering. With MDCure, we fine-tune a wide variety of LLMs up to 70B parameters in size from the FlanT5, Qwen2, and LLAMA3.1 model families. Extensive evaluations on a wide range of MD and long-context benchmarks spanning various tasks and domains show MDCure consistently improves performance over pre-trained baselines and base models by up to 75.1{\%}."
 }
 ```
