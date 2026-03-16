@@ -160,9 +160,21 @@ def generate_and_save_instructions(args):
 
         ###### ACCESS DOCUMENT CLUSTERS
         # read the document clusters into dataframe
-        data_path = os.path.join(args.input_dir, file_name.replace('.pt', '.csv'))
-        clusters_df = pd.read_csv(data_path, index_col=None, converters={"articles": literal_eval, "cluster_id": literal_eval})
-        print("Total cluster count: ", len(clusters_df))
+        # data_path = os.path.join(args.input_dir, file_name.replace('.pt', '.csv'))
+        # clusters_df = pd.read_csv(data_path, index_col=None, converters={"articles": literal_eval, "cluster_id": literal_eval})
+        # print("Total cluster count: ", len(clusters_df))
+
+        
+        data_path = os.path.join(args.input_dir, file_name)
+        with open(data_path, "rb") as f:
+            data_list = torch.load(f)
+
+        for_df = {"articles": [], "cluster_id": []}
+        for i, cluster in enumerate(data_list):
+            for_df["articles"].append(cluster)
+            for_df["cluster_id"].append(i)
+
+        clusters_df = pd.DataFrame(for_df)
 
         # shuffle so it's randomized order (esp. in terms of cluster IDs)
         clusters_df = clusters_df.sample(n=len(clusters_df), random_state=42)
